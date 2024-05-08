@@ -68,9 +68,16 @@ function Navbar() {
             </Typography>
           </Link>
           <Box sx={{ flexGrow: 1 }}/>
-          <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Resume</Button>
+
+          <Link to="/resume">
+            <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Resume</Button>
+          </Link>
+          
           <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Portfolio</Button>
-          <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Contact</Button>
+          
+          <Link to="/contact">
+            <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Contact</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>
