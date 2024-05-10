@@ -15,7 +15,7 @@ function Banner() {
         justifyContent: 'flex-end',// Align children to the bottom
         m: 0,
         position: 'relative',
-        height: 600,
+        height: '80vh',
         backgroundColor: 'primary',
         color: 'white',
         p: 4,

@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Resume from '../components/Resume/resumeembed';
 
-function ResumePdf() {
+function ResumePDF() {
     return <Resume></Resume>
   }
 
 export default function ResumePage() {
     return (
         <div>
-            <ResumePdf />
+            <ResumePDF />
         </div>
     );
 }
