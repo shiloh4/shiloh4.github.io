@@ -45,7 +45,16 @@ function Navbar() {
 
   return (
     <Box sx={{ flexGrow: 1}}>
-      <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, transform: show ? 'translateY(0)' : 'translateY(-100%)', transition: 'transform 0.5s ease-in-out' }}>
+      <AppBar position="fixed" sx={{ 
+        display: 'flex',
+        zIndex: (theme) => theme.zIndex.drawer + 1, 
+        transform: show ? 'translateY(0)' : 'translateY(-100%)', 
+        transition: 'transform 0.5s ease-in-out', 
+        borderRadius: '12px',
+        mt: 1,
+        mx: 1,
+        width: '99%'
+      }}>
         <Toolbar>
           <Tooltip title="That's me!">
             <Link to="/" style={{ textDecoration: 'none' }}>
@@ -73,7 +82,10 @@ function Navbar() {
             <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Resume</Button>
           </Link>
           
-          <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Portfolio</Button>
+          <Link to="/portfolio">
+            <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Portfolio</Button>
+          </Link>
+          
           
           <Link to="/contact">
             <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Contact</Button>
