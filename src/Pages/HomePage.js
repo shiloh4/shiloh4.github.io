@@ -9,14 +9,10 @@ function ButtonUsage() {
   return <Button variant="contained">Hello world</Button>;
 }
 
-function HomeBanner() {
-  return <Banner></Banner>
-}
-
 export default function HomePage() {
   return (
     <div>
-      <HomeBanner />
+      <Banner />
       <Body />
       <Skills />
       <Box sx={{display: 'flex', flexDirection: 'row', m: 10}}>

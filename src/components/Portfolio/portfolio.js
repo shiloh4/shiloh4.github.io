@@ -129,8 +129,40 @@ function PortfolioUsage() {
                     Spotify Wrapped App
                 </AccordionSummary>
                 <AccordionDetails>
-                    <h4>Mobile Application</h4>
-                    Android Studio
+                    <Box sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                    }}>
+                        <Box sx={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'center',
+                        }}>
+                            <Box sx={{
+                                width: '100%',
+                                height: '100%',
+                                mt: 1,
+                            }}>
+                        <h3>Mobile Application</h3>
+                        <p><b>Made with Android Studio with Kotlin and Java.</b></p>
+                        Android Studio
+                        </Box>
+                            <Box sx={{
+                                width: '100%',
+                                height: '100%',
+                                borderRadius: '12px',
+                                mt: 1,
+                                pl: 2
+                            }}>
+                                <video width="100%" height="100%" controls muted loop ref={ videoRef }>
+                                    <source src= { quantum } type="video/mp4" /> // Spotify Wrapped app demo
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Box>
+                        </Box>
+                    </Box>
+                    
                 </AccordionDetails>
             </Accordion>
             <Accordion elevation={0} sx={{ 
