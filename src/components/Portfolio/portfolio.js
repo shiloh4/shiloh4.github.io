@@ -6,6 +6,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import quantum from '../../assets/quantumdemo.mp4';
+import spotify from '../../assets/spotifyWrappedDemo.mp4';
 import BouncyThing from '../../assets/BouncyThing.gif';
 import Fan from '../../assets/Fan.gif';
 import Logo from '../../assets/GameIcon.png';
@@ -27,7 +28,7 @@ function PortfolioUsage() {
             justifyContent: 'center',
             alignItems: 'center',
             flexGrow: 1,
-            pt: 12,
+            pt: 11,
             pb: 2,
             minHeight: 'calc(100vh-75px)'
         }}>
@@ -81,7 +82,6 @@ function PortfolioUsage() {
                             <Box sx={{
                                 width: '100%',
                                 height: '100%',
-                                borderRadius: '12px',
                                 mt: 1,
                                 pl: 2
                             }}>
@@ -101,10 +101,7 @@ function PortfolioUsage() {
                             <Box sx={{width: '10%', height: '30%', mx: 4, mt: 0}}><img width="100%" height="100%" src={ Logo }></img></Box>
                         </Box>
                     </Box>
-                    
-                    
                 </AccordionDetails>
-                
             </Accordion>
             <Accordion elevation={0} sx={{ 
                 display: 'flex',
@@ -131,38 +128,35 @@ function PortfolioUsage() {
                 <AccordionDetails>
                     <Box sx={{
                         display: 'flex',
-                        flexDirection: 'column',
+                        flexDirection: 'row',
                         justifyContent: 'center',
                     }}>
                         <Box sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'center',
+                            width: '100%',
+                            height: '100%',
+                            mt: 1,
                         }}>
-                            <Box sx={{
-                                width: '100%',
-                                height: '100%',
-                                mt: 1,
-                            }}>
-                        <h3>Mobile Application</h3>
-                        <p><b>Made with Android Studio with Kotlin and Java.</b></p>
-                        Android Studio
+                            <div width="100%" height="100%">
+                                <h3>Mobile Application</h3>
+                                <p><b>Made in Android Studio with Kotlin and Java.</b></p>
+                                <p><b>Repo link: </b><Link href="https://github.com/pammikoundi/spotify_wrapped_app" underline="hover" target="_blank" rel="noopener" color="inherit">https://github.com/pammikoundi/spotify_wrapped_app</Link></p>
+                                <p><b>Full Demo link: </b><Link href="https://www.youtube.com/watch?v=nicR47nDl9o" underline="hover" target="_blank" rel="noopener" color="inherit">https://www.youtube.com/watch?v=nicR47nDl9o</Link></p>
+                                <p>Heavily inspired by Spotify's annual Wrapped feature, this project consisted of 7 group members working together to build an app that would allow you to view information about your listening habits on Spotify. The project was built on the Android Studio framework. We learnt how to integrate <b>Spotify's API</b> and <b>Firebase</b> into our application to allow us to store and access user data.</p>
+                                <p>My primary contribution was first performing requirements engineering and designing the UI/UX of the app with the help of <b>LottieFiles</b>. <b>Jetpack Compose</b> was also a toolkit we used to help accelerate the development process.</p>
+                            </div>               
                         </Box>
-                            <Box sx={{
-                                width: '100%',
-                                height: '100%',
-                                borderRadius: '12px',
-                                mt: 1,
-                                pl: 2
-                            }}>
-                                <video width="100%" height="100%" controls muted loop ref={ videoRef }>
-                                    <source src= { quantum } type="video/mp4" /> // Spotify Wrapped app demo
-                                    Your browser does not support the video tag.
-                                </video>
-                            </Box>
+                        <Box sx={{
+                            width: '30%',
+                            height: 'auto',
+                            mt: 1,
+                            pl: 2
+                        }}>
+                            <video width="100%" height="100%" controls muted loop ref={ videoRef }>
+                                <source src= { spotify } type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
                         </Box>
-                    </Box>
-                    
+                    </Box>    
                 </AccordionDetails>
             </Accordion>
             <Accordion elevation={0} sx={{ 
