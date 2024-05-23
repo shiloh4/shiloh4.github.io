@@ -96,9 +96,9 @@ function PortfolioUsage() {
                             flexDirection: 'row',
                             justifyContent: 'center',
                         }}>
-                            <Box sx={{width: '10%', height: '30%', mx: 4, mt: 2}}><img width="100%" height="100%" src={ BouncyThing }></img></Box>
-                            <Box sx={{width: '10%', height: '30%', mx: 4, mt: 2}}><img width="100%" height="100%" src={ Fan }></img></Box>
-                            <Box sx={{width: '10%', height: '30%', mx: 4, mt: 0}}><img width="100%" height="100%" src={ Logo }></img></Box>
+                            <Box sx={{width: '10%', height: '30%', mx: 4, mt: 2}}><img alt="BouncyThing" width="100%" height="100%" src={ BouncyThing }></img></Box>
+                            <Box sx={{width: '10%', height: '30%', mx: 4, mt: 2}}><img alt="Fan" width="100%" height="100%" src={ Fan }></img></Box>
+                            <Box sx={{width: '10%', height: '30%', mx: 4, mt: 0}}><img alt="Logo" width="100%" height="100%" src={ Logo }></img></Box>
                         </Box>
                     </Box>
                 </AccordionDetails>
@@ -182,10 +182,37 @@ function PortfolioUsage() {
                     Current Crisis
                 </AccordionSummary>
                 <AccordionDetails>
-                    <h4>Video Game</h4>
-                    Unity
+                    <Box sx={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                    }}>
+                        <Box sx={{
+                            width: '100%',
+                            height: '100%',
+                            mt: 1,
+                        }}>
+                            <div width="100%" height="100%">
+                                <h3>Video Game</h3>
+                                <p><b>Made in Unity with C#.</b></p>
+                                <p><b>Repo link: </b><Link href="https://github.gatech.edu/Gaming-for-Electric-Power-Grids/vip_resilience_games" underline="hover" target="_blank" rel="noopener" color="inherit">https://github.gatech.edu/Gaming-for-Electric-Power-Grids/vip_resilience_games</Link></p>
+                                <p>The development of this video is part of a larger research effort to crowdsource resiliency for electric power grids. The game simulates real-life problems encountered with designing and building power grids to power modern cities. Players attempt to construct resilient power grids with 3 main factors in mind: cost, reliability, and safety. The high-level goal of the game is to compile data on the weight people place on these 3 values and how they would implement electric power grids.</p>
+                                <p>My contribution thus far has been producing game assets as part of the Graphics subteam to design and implement the UI for the game. This specifically refers to the menus and UI interface. As part of the Graphics subteam, we often collaborate with the Game Design subteam and Implementation subteam to determine how certain mechanics of the game are depicted. I was put in charge of finding a solution to depicting 2 tiles connected by both overhead lines and underground cables.</p>
+                            </div>               
+                        </Box>
+                        <Box sx={{
+                            width: '30%',
+                            height: 'auto',
+                            mt: 1,
+                            pl: 2
+                        }}>
+                            <video width="100%" height="100%" controls muted loop ref={ videoRef }>
+                                <source type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </Box>
+                    </Box>
                 </AccordionDetails>
-                
             </Accordion>
         </Box>
 
