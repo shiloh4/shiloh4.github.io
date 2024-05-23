@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://github.com/shiloh4/shilo4.github.io.git"
+    "deploy": "gh-pages -d build -r https://github.com/shiloh4/shiloh4.github.io.git"
   },
   "eslintConfig": {
     "extends": [
