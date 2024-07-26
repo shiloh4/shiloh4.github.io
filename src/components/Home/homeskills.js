@@ -10,10 +10,10 @@ function Skills() {
             my: 5,
             }}>
                 <Typography sx={{my: 2}}>
-                    <b>Programming/Scripting Languages/Libraries: </b>HTML, CSS, React, SQL, Python, Java, JavaScript, Kotlin, C, C#
+                    <b>Programming/Scripting Languages/Libraries: </b>HTML, CSS, React, Java, Python, TKinter, C, C#, JavaScript, SQL, LaTeX, SenseTalk
                 </Typography>
                 <Typography sx={{my: 2}}>
-                    <b>Frameworks:</b> Android Studio, Microsoft Suite (Excel, Access, etc.), Unity, Git, GitHub, PopSQL
+                    <b>Software/Frameworks:</b> Android Studio, Unity, Git, GitHub, PopSQL, Firebase, Node.js, MagicaVoxel, Aseprite, Microsoft Suite (Excel, Access, etc.)
                 </Typography>
                 <Typography sx={{my: 2}}>
                     <b>Languages:</b> English, Malay, Mandarin
