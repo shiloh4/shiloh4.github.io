@@ -51,6 +51,7 @@ function Navbar() {
         transform: show ? 'translateY(0)' : 'translateY(-100%)', 
         transition: 'transform 0.5s ease-in-out', 
         borderRadius: '12px',
+        bgcolor: '#003057',
         mt: 1,
         mx: 1,
         width: '99%'
@@ -71,7 +72,7 @@ function Navbar() {
                 flexGrow: 1,
                 fontWeight: 700,
                 letterSpacing: '.2rem',
-                color: 'inherit',
+                color: '#B3A369',
                 textDecoration: 'none',}}>
               Portfolio
             </Typography>
@@ -79,16 +80,16 @@ function Navbar() {
           <Box sx={{ flexGrow: 1 }}/>
 
           <Link to="/resume">
-            <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Resume</Button>
+            <Button sx={{ml: 5, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Resume</Button>
           </Link>
           
           <Link to="/portfolio">
-            <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Portfolio</Button>
+            <Button sx={{ml: 5, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' }}} disableElevation>Portfolio</Button>
           </Link>
           
           
           <Link to="/contact">
-            <Button sx={{ml: 5, color: 'white', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Contact</Button>
+            <Button sx={{ml: 5, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Contact</Button>
           </Link>
         </Toolbar>
       </AppBar>

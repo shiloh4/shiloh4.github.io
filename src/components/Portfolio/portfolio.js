@@ -49,7 +49,7 @@ function PortfolioUsage() {
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="quantum-content" id="quantum-header" sx={{
                         fontSize: 20, 
                         fontWeight: 700,
-                        backgroundColor: '#ACACAC',
+                        backgroundColor: '#707070',
                         borderRadius: '8px'
                     }}>
                         Quantum
@@ -126,7 +126,7 @@ function PortfolioUsage() {
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="quantum-content" id="quantum-header" sx={{
                         fontSize: 20, 
                         fontWeight: 700,
-                        backgroundColor: '#ACACAC',
+                        backgroundColor: '#707070',
                         borderRadius: '8px'
                     }}>
                         Spotify Wrapped App
@@ -188,7 +188,7 @@ function PortfolioUsage() {
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="quantum-content" id="quantum-header" sx={{
                         fontSize: 20, 
                         fontWeight: 700,
-                        backgroundColor: '#ACACAC',
+                        backgroundColor: '#707070',
                         borderRadius: '8px'
                     }}>
                         Current Crisis

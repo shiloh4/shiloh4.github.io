@@ -10,7 +10,7 @@ const colors = [
 ];
 
 function ButtonUsage() {
-  const [color, setColor] = React.useState("primary");
+  const [color, setColor] = React.useState("#B3A369");
   const [buttonSize, setButtonSize] = React.useState(1);
 
   const handleClick = () => {
