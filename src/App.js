@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/navbar';
@@ -32,6 +32,18 @@ const pageTransition = {
 
 export default function App() {
   const location = useLocation();
+  const [showSlide, setShowSlide] = useState(false);
+
+  useEffect(() => {
+    setShowSlide(false);
+    const timer = setTimeout(() => {
+      setShowSlide(true);
+    }, pageTransition.duration * 1000); // Delay slide animation until page transition completes
+    return () => {console.log('Clearing timer'); 
+    clearTimeout(timer);};
+  }, [location]);
+
+  // console.log('App showSlide:', showSlide);
 
   return (
     
@@ -41,12 +53,13 @@ export default function App() {
         <AnimatePresence mode='wait'>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<motion.div
+                                        // key={location.pathname}
                                         initial="initial"
                                         animate="in"
                                         exit="out"
                                         variants={pageVariants}
                                         transition={pageTransition}>
-                                          <HomePage />
+                                          <HomePage showSlide= { showSlide }  />
                                         </motion.div>} />
             <Route path="/resume" element={<motion.div
                                             initial="initial"
@@ -54,7 +67,7 @@ export default function App() {
                                             exit="out"
                                             variants={pageVariants}
                                             transition={pageTransition}>
-                                              <ResumePage />
+                                              <ResumePage/>
                                           </motion.div>} />
             <Route path="/portfolio" element={<motion.div
                                                 initial="initial"
@@ -62,7 +75,7 @@ export default function App() {
                                                 exit="out"
                                                 variants={pageVariants}
                                                 transition={pageTransition}>
-                                                  <PortfolioPage />
+                                                  <PortfolioPage/>
                                               </motion.div>} />
             <Route path="/contact" element={<motion.div
                                               initial="initial"
@@ -70,7 +83,7 @@ export default function App() {
                                               exit="out"
                                               variants={pageVariants}
                                               transition={pageTransition}>
-                                                <ContactPage />
+                                                <ContactPage/>
                                             </motion.div>} />
           </Routes>
           </AnimatePresence>

@@ -29,10 +29,11 @@ function ButtonUsage() {
   );
 }
 
-export default function HomePage() {
+export default function HomePage({ showSlide }) {
+  // console.log('HomePage showSlide:', showSlide)
   return (
     <div>
-      <Banner />
+      <Banner showSlide={ showSlide }/>
       <Body />
       <Skills />
       <Box sx={{display: 'flex', flexDirection: 'row', m: 10}}>
