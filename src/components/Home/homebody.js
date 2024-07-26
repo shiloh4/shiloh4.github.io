@@ -40,10 +40,10 @@ function Body() {
                         About Me
                     </Typography>
                     <Typography sx={{mb: 1}}>
-                        Hi, my name is Ethan! I'm a junior in Comp Sci at Georgia Tech. My main interests are in UI/UX design, game development, and graphic design. More recently, I have also taken an interest in data analysis and database management. Hence, my Threads are <Link href="https://www.cc.gatech.edu/academics/threads/information-internetworks" underline="hover" target="_blank" rel="noopener" x={{ fontFamily: 'roboto', fontSize: 16, my: 2 }}>Information Internetworks</Link> and <Link href="https://www.cc.gatech.edu/academics/threads/media" underline="hover" target="_blank" rel="noopener" sx={{ fontFamily: 'roboto', fontSize: 16, my: 2 }}>Media</Link>.
+                        Hi, my name is Ethan! I'm a junior in Comp Sci at Georgia Tech. My main interests are in front-end development and game development. More recently, I have also taken an interest in data analysis and database management. Hence, my Threads are <Link href="https://www.cc.gatech.edu/academics/threads/information-internetworks" underline="hover" target="_blank" rel="noopener" x={{ fontFamily: 'roboto', fontSize: 16, my: 2 }}>Information Internetworks</Link> and <Link href="https://www.cc.gatech.edu/academics/threads/media" underline="hover" target="_blank" rel="noopener" sx={{ fontFamily: 'roboto', fontSize: 16, my: 2 }}>Media</Link>.
                     </Typography>
                     <Typography>
-                        Away from the keyboard, I love being outdoors and remaining active. One activity I frequent is rockclimbing. I also play badminton, have a black belt in Taekwondo, and a PADI Advanced Open Water Scuba Diver license. I love photography especially when travelling. I take a deep interest in the many different styles in photography and often challenge myself to learn how to shoot in new styles. 
+                        Away from the keyboard, I enjoy being outdoors and remaining active. One activity I frequent is rockclimbing. I also play badminton, have a black belt in Taekwondo, and a PADI Advanced Open Water Scuba Diver license. I have a strong interest in photography especially experimenting with the many different styles of photography.
                     </Typography>
             </Box>
             </Paper>
