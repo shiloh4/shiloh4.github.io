@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useTheme, useMediaQuery } from '@mui/material';
 import { Typography , Tooltip, Container } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
@@ -14,6 +15,8 @@ import Logo from '../../assets/GameIcon.png';
 
 function PortfolioUsage() {
     const videoRef = useRef(null);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
       
         useEffect(() => {
           if (videoRef.current) {
@@ -85,17 +88,17 @@ function PortfolioUsage() {
                                     </div>
                                     
                                 </Box>
-                                <Box sx={{
+                                {!isMobile && (<Box sx={{
                                     width: '100%',
                                     height: '100%',
                                     mt: 1,
                                     pl: 2
-                                }}>
+                                }}>            
                                     <video width="100%" height="100%" controls muted loop ref={ videoRef }>
                                         <source src= { quantum } type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
-                                </Box>
+                                </Box>)}
                             </Box>
                             <Box sx={{
                                 display: 'flex',
@@ -157,7 +160,7 @@ function PortfolioUsage() {
                                     <p>My primary contribution was first performing requirements engineering and designing the UI/UX of the app with the help of <b>LottieFiles</b>. <b>Jetpack Compose</b> was also a toolkit we used to help accelerate the development process.</p>
                                 </div>               
                             </Box>
-                            <Box sx={{
+                            {!isMobile && (<Box sx={{
                                 width: '30%',
                                 height: 'auto',
                                 mt: 1,
@@ -168,6 +171,7 @@ function PortfolioUsage() {
                                     Your browser does not support the video tag.
                                 </video>
                             </Box>
+                            )}
                         </Box>    
                     </AccordionDetails>
                 </Accordion>
@@ -218,7 +222,7 @@ function PortfolioUsage() {
                                     <p>My contribution thus far has been producing game assets as part of the Graphics subteam to design and implement the UI for the game. This specifically refers to the menus and UI interface. As part of the Graphics subteam, we often collaborate with the Game Design subteam and Implementation subteam to determine how certain mechanics of the game are depicted. I was put in charge of finding a solution to depicting 2 tiles connected by both overhead lines and underground cables.</p>
                                 </div>               
                             </Box>
-                            <Box sx={{
+                            {!isMobile && (<Box sx={{
                                 width: '30%',
                                 height: 'auto',
                                 mt: 1,
@@ -231,6 +235,7 @@ function PortfolioUsage() {
                                     </video>
                                 </Tooltip>
                             </Box>
+                            )}
                         </Box>
                     </AccordionDetails>
                 </Accordion>

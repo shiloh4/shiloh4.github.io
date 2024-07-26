@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTheme, useMediaQuery } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,6 +16,9 @@ function ImageAvatars() {
 }
 
 function Navbar() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -44,9 +48,12 @@ function Navbar() {
   }, [lastScrollY]);
 
   return (
-    <Box sx={{ flexGrow: 1}}>
+    <Box sx={{ flexGrow: 1,}}>
       <AppBar position="fixed" sx={{ 
+        justifyContent: 'center',
         display: 'flex',
+        overflowX: 'auto',
+        whiteSpace: 'nowrap',
         zIndex: (theme) => theme.zIndex.drawer + 1, 
         transform: show ? 'translateY(0)' : 'translateY(-100%)', 
         transition: 'transform 0.5s ease-in-out', 
@@ -54,7 +61,7 @@ function Navbar() {
         bgcolor: '#003057',
         mt: 1,
         mx: 1,
-        width: '99%'
+        width: isMobile ? 'calc(100% - 16px)' : '99%',
       }}>
         <Toolbar>
           <Tooltip title="That's me!">

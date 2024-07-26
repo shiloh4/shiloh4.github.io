@@ -8,8 +8,10 @@ function Resume() {
       flexDirection: 'column',
       justifyContent: 'center',
       flexGrow: 1,
-      p: 10,
-      height: 'calc(100vh - 75px)',
+      pt: 10,
+      px: '5%',
+      pb: '5%',
+      height: 'calc(100vh - 75pt)',
       overflow: 'auto' }}>
         <iframe
         src= { resume }
