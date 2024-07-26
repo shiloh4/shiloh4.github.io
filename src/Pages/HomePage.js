@@ -36,7 +36,7 @@ export default function HomePage({ showSlide }) {
       <Banner showSlide={ showSlide }/>
       <Body />
       <Skills />
-      <Box sx={{display: 'flex', flexDirection: 'row', m: 10}}>
+      <Box sx={{display: 'flex', flexDirection: 'row', m: 8}}>
         <Box sx={{flexGrow: 1}}></Box>
         <ButtonUsage/>
         <Box sx={{flexGrow: 1}}></Box>
