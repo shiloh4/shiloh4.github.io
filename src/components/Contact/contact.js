@@ -14,7 +14,7 @@ function Contact() {
             flexDirection: 'column',
             justifyContent: 'center',
             flexGrow: 1,
-            mx: 30,
+            mx: '20%',
             my: 0,
             p: 0,
             height: 'calc(100vh - 75px)',

@@ -19,7 +19,7 @@ function PortfolioUsage() {
           if (videoRef.current) {
             videoRef.current.play().catch(error => console.error('Error playing the video:', error));
           }
-        }, { quantum }); // Re-run the effect if the source changes
+        }, [ quantum ]); // Re-run the effect if the source changes
 
 
     return (

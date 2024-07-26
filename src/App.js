@@ -39,8 +39,8 @@ export default function App() {
     const timer = setTimeout(() => {
       setShowSlide(true);
     }, pageTransition.duration * 1000); // Delay slide animation until page transition completes
-    return () => {console.log('Clearing timer'); 
-    clearTimeout(timer);};
+    return () => 
+    clearTimeout(timer);
   }, [location]);
 
   // console.log('App showSlide:', showSlide);

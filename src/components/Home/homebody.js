@@ -5,9 +5,12 @@ import portraitpic from '../../assets/portrait.jpg';
 import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Grow from '@mui/material/Grow';
+import { useTheme, useMediaQuery } from '@mui/material';
 
 function Body() {
     const [checked, setChecked] = useState(false);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     useEffect(() => {
         // Set the checked state to true after the component mounts to trigger the Grow animation
@@ -17,17 +20,19 @@ function Body() {
     return (
         <Box sx={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: isMobile ? 'column' : 'row',
             my: 8,
             justifyContent: 'center',
-            
+            alignItems: isMobile ? 'center' : 'flex-start',
         }}>
             <Grow in={checked} timeout={1000}>
-            <img height = '300' width = '300' src = { portraitpic } style={{borderRadius: '16px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.4)',}}>
+            <img src = { portraitpic } style={{width: isMobile ? '80%' : '15%', borderRadius: '16px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.4)', marginBottom: isMobile ? '16px' : '0'}} >
             </img>
             </Grow>
             <Grow in={checked} timeout={1000}>
-            <Paper elevation={3} sx={{width: '40%', borderRadius: '16px', ml: '15pt'}}>            
+            <Paper elevation={3} sx={{width: isMobile ? '80%' : '55%',
+                                      borderRadius: '16px',
+                                      ml: isMobile ? '0' : '15pt',}}>            
             <Box sx={{
                 flexDirection: 'column',
                 padding: 5,
