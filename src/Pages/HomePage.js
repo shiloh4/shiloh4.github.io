@@ -6,7 +6,7 @@ import Body from '../components/Home/homebody';
 import Skills from '../components/Home/homeskills';
 
 const colors = [
-  "#FF5733", "#33FF57", "#3357FF", "#FF33A5", "#A533FF", "#FFDB33", "#33FFF6"
+  "#B3A369, #FF5733", "#33FF57", "#3357FF", "#FF33A5", "#A533FF", "#FFDB33", "#33FFF6"
 ];
 
 function ButtonUsage() {

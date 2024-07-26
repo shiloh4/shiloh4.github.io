@@ -64,7 +64,7 @@ function Navbar() {
           </Tooltip>
             
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit', flexGrow: 1 }}>
-            <Typography variant="h6" 
+            <Typography variant="h5" 
               component="div" 
               sx={{
                 ml: 2,
