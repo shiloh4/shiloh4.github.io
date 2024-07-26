@@ -1,18 +1,9 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grow from '@mui/material/Grow';
 import Banner from '../components/Home/homebanner';
 import Body from '../components/Home/homebody';
 import Skills from '../components/Home/homeskills';
-
-// const AnimatedButton = () => {
-//   const [checked, setChecked] = useState(false);
-
-//   const handleClick = () => {
-//     setChecked((prev) => !prev);
-//   };
-// };
 
 const colors = [
   "#FF5733", "#33FF57", "#3357FF", "#FF33A5", "#A533FF", "#FFDB33", "#33FFF6"
