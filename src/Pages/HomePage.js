@@ -23,7 +23,7 @@ function ButtonUsage() {
     <Box sx={{ position: 'relative', display: 'inline-block' }}>
       <Button variant="contained" onClick={ handleClick } style={{ backgroundColor: color, '&:hover': { backgroundColor: color }, transform: `scale(${buttonSize})`, 
           transition: 'transform 0.3s' }}>
-        Hello world
+        <code style = {{ fontSize: '14pt' }}>Hello World</code>
       </Button>
     </Box>
   );
@@ -36,7 +36,7 @@ export default function HomePage({ showSlide }) {
       <Banner showSlide={ showSlide }/>
       <Body />
       <Skills />
-      <Box sx={{display: 'flex', flexDirection: 'row', m: 8}}>
+      <Box sx={{display: 'flex', flexDirection: 'row', m: 5}}>
         <Box sx={{flexGrow: 1}}></Box>
         <ButtonUsage/>
         <Box sx={{flexGrow: 1}}></Box>
