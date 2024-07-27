@@ -7,7 +7,7 @@ function Skills() {
             display: 'flex',
             flexDirection: 'column',
             mx: '10%',
-            my: '8%',
+            my: '4%',
             }}>
                 <Typography sx={{my: '1%'}}>
                     <b>Programming/Scripting Languages/Libraries: </b>HTML, CSS, React, Java, Python, TKinter, C, C#, JavaScript, SQL, LaTeX, SenseTalk
