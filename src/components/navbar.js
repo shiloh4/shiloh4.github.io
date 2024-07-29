@@ -78,10 +78,10 @@ function Navbar() {
                 mr: 2,
                 flexGrow: 1,
                 fontWeight: 700,
-                letterSpacing: '.2rem',
+                // letterSpacing: '.2rem',
                 color: '#B3A369',
                 textDecoration: 'none',}}>
-              Portfolio
+              ETHAN LOO
             </Typography>
           </Link>
           <Box sx={{ flexGrow: 1 }}/>
