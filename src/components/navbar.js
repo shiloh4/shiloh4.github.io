@@ -72,15 +72,15 @@ function Navbar() {
           <Box sx={{ flexGrow: 1 }}/>
 
           <Link to="/resume">
-            <Button sx={{ml: 2, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>resume</Button>
+            <Button sx={{ml: 2, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' }, textTransform: 'none' }} disableElevation>resume</Button>
           </Link>
           
           <Link to="/portfolio">
-            <Button sx={{ml: 2, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' }}} disableElevation>portfolio</Button>
+            <Button sx={{ml: 2, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' }, textTransform: 'none' }} disableElevation>portfolio</Button>
           </Link>
           
           <Link to="/contact">
-            <Button sx={{ml: 2, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>contact</Button>
+            <Button sx={{ml: 2, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' }, textTransform: 'none' }} disableElevation>contact</Button>
           </Link>
         </Toolbar>
       </AppBar>

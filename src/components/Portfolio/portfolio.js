@@ -94,7 +94,7 @@ function PortfolioUsage() {
                                     mt: 1,
                                     pl: 2
                                 }}>            
-                                    <video width="100%" height="100%" controls muted loop ref={ videoRef }>
+                                    <video width="100%" height="100%" controls autoPlay muted loop ref={ videoRef }>
                                         <source src= { quantum } type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
@@ -166,7 +166,7 @@ function PortfolioUsage() {
                                 mt: 1,
                                 pl: 2
                             }}>
-                                <video width="100%" height="100%" controls muted loop ref={ videoRef }>
+                                <video width="100%" height="100%" controls autoPlay muted loop ref={ videoRef }>
                                     <source src= { spotify } type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
@@ -229,7 +229,7 @@ function PortfolioUsage() {
                                 pl: 2
                             }}>
                                 <Tooltip title="There's meant to be a demo video here but the specific version of Unity does not work so I can't launch the game momentarily :(">
-                                    <video width="100%" height="100%" controls muted loop ref={ videoRef }>
+                                    <video width="100%" height="100%" controls autoPlay muted loop ref={ videoRef }>
                                         <source type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
