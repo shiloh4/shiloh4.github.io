@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import resume from '../../assets/resume.pdf';
 
 function Resume() {
+    const resumeLink = "https://drive.google.com/file/d/19deys--ubDNNOLRigvwkXR2eQW2hhh8F/preview";
+
     return (
       <Box sx={{ display: 'flex',
       flexDirection: 'column',
@@ -14,7 +15,7 @@ function Resume() {
       height: 'calc(100vh - 75pt)',
       overflow: 'auto' }}>
         <iframe
-        src= { resume }
+        src= { resumeLink }
         title="Resume"
         width="100%"
         height= "100%"
