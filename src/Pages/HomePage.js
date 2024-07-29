@@ -33,7 +33,7 @@ export default function HomePage({ showSlide }) {
   // console.log('HomePage showSlide:', showSlide)
   return (
     <div>
-      {/* <Banner showSlide={ showSlide }/> */}
+      <Banner showSlide={ showSlide }/>
       <Body />
       <Skills />
       <Box sx={{display: 'flex', flexDirection: 'row', mx: 5, my: 3}}>

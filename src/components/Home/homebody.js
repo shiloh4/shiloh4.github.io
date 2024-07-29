@@ -26,10 +26,10 @@ function Body() {
             justifyContent: 'center',
             alignItems: isMobile ? 'center' : 'flex-start',
         }}>
-            {/* <Grow in={checked} timeout={1000}>
+            <Grow in={checked} timeout={1000}>
             <img src = { portraitpic } style={{width: isMobile ? '80%' : '15%', borderRadius: '16px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.4)', marginBottom: isMobile ? '16px' : '0'}} >
             </img>
-            </Grow> */}
+            </Grow>
             <Grow in={checked} timeout={1000}>
             <Paper elevation={3} sx={{width: isMobile ? '80%' : '55%',
                                       borderRadius: '16px',
