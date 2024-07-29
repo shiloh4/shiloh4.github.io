@@ -3,11 +3,14 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/navbar';
 import './App.css';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Footer from './components/footer';
 import HomePage from './Pages/HomePage';
 import ContactPage from './Pages/ContactPage';
 import ResumePage from './Pages/ResumePage';
 import PortfolioPage from './Pages/PortfolioPage';
+import { alignProperty } from '@mui/material/styles/cssUtils';
 
 const pageVariants = {
   initial: {
@@ -48,7 +51,11 @@ export default function App() {
   return (
     
     <div>
-      <Navbar />
+      <Grid container justifyContent="center" alignItems="center">
+        <Grid item>
+          <Navbar />
+        </Grid>
+      </Grid>
         <div className="smth">
         <AnimatePresence mode='wait'>
           <Routes location={location} key={location.pathname}>

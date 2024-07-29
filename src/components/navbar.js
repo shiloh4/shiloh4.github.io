@@ -48,20 +48,20 @@ function Navbar() {
   }, [lastScrollY]);
 
   return (
-    <Box sx={{ flexGrow: 1,}}>
+    <Box>
       <AppBar position="fixed" sx={{ 
         justifyContent: 'center',
         display: 'flex',
-        overflowX: 'auto',
-        whiteSpace: 'nowrap',
         zIndex: (theme) => theme.zIndex.drawer + 1, 
         transform: show ? 'translateY(0)' : 'translateY(-100%)', 
         transition: 'transform 0.5s ease-in-out', 
         borderRadius: '12px',
-        bgcolor: '#003057',
+        bgcolor: 'rgba(28,28,28,0.1)', 
+        backdropFilter: 'blur(10px)', // Blur effect
+        WebkitBackdropFilter: 'blur(10px)', // safari compatibility
         mt: 1,
-        mx: 1,
-        width: isMobile ? 'calc(100% - 16px)' : '99%',
+        mr: 1,
+        width: isMobile ? '96%' : '99%',
       }}>
         <Toolbar>
           <Tooltip title="That's me!">
@@ -69,34 +69,18 @@ function Navbar() {
               <ImageAvatars />
             </Link>
           </Tooltip>
-            
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit', flexGrow: 1 }}>
-            <Typography variant="h5" 
-              component="div" 
-              sx={{
-                ml: 2,
-                mr: 2,
-                flexGrow: 1,
-                fontWeight: 700,
-                letterSpacing: '.2rem',
-                color: '#B3A369',
-                textDecoration: 'none',}}>
-              PORTFOLIO
-            </Typography>
-          </Link>
           <Box sx={{ flexGrow: 1 }}/>
 
           <Link to="/resume">
-            <Button sx={{ml: 5, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Resume</Button>
+            <Button sx={{ml: 2, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>resume</Button>
           </Link>
           
           <Link to="/portfolio">
-            <Button sx={{ml: 5, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' }}} disableElevation>Portfolio</Button>
+            <Button sx={{ml: 2, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' }}} disableElevation>portfolio</Button>
           </Link>
           
-          
           <Link to="/contact">
-            <Button sx={{ml: 5, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>Contact</Button>
+            <Button sx={{ml: 2, color: '#B3A369', '& .MuiButton-label': { textAlign: 'center' } }} disableElevation>contact</Button>
           </Link>
         </Toolbar>
       </AppBar>

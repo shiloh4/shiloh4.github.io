@@ -47,11 +47,11 @@ function PortfolioUsage() {
                     },
                     overflow: 'auto',
                     fontFamily: 'roboto', 
-                    width: '80%'
+                    width: isMobile ? '80%' : '55%'
                 }}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="quantum-content" id="quantum-header" sx={{
-                        fontSize: 20, 
-                        fontWeight: 700,
+                        fontSize: 16, 
+                        // fontWeight: 700,
                         backgroundColor: '#707070',
                         borderRadius: '8px'
                     }}>
@@ -76,15 +76,15 @@ function PortfolioUsage() {
                                     <div width="100%" height="100%">
                                     <Typography variant="h5" sx={{
                                         flexGrow: 1,
-                                        color: 'inherit',
+                                        color: theme.palette.primary.main,
                                         textDecoration: 'none',
                                         fontWeight: 'bold'}}>
                                         Video Game
                                     </Typography>
-                                        <p><b>Made with Unity in C#. Assets produced with Aseprite.</b></p>
-                                        <p><b>Repo link: </b><Link href="https://github.com/Chase-rgb/Quantum" underline="hover" target="_blank" rel="noopener" color="inherit">https://github.com/Chase-rgb/Quantum </Link></p>
-                                        <p>This was the first video game I helped developed in a team environment. Quantum is a platformer game where you and a friend have to solve puzzles with collaboration. The novelty of this game is the Quantum Locking mechanic that allows one player to transfer some momentum to the other which allows them to jump higher or dash further than originally possible.</p>
-                                        <p>My main focus was on the UI/UX design, particularly with the goal of combining the game's art direction together with a user interface that was simple and intuitive to use. I helped design and produce the menus and all its assets found within the game in addition with other game assets.</p>
+                                        <Typography variant="body2" sx={{ my: 2 }}><b>Made with Unity in C#. Assets produced with Aseprite.</b></Typography>
+                                        <Typography variant="body2" sx={{ my: 2 }}><b>Repo link: </b><Link href="https://github.com/Chase-rgb/Quantum" underline="hover" target="_blank" rel="noopener" color="inherit">https://github.com/Chase-rgb/Quantum </Link></Typography>
+                                        <Typography variant="body2" sx={{ my: 2 }}>This was the first video game I helped developed in a team environment. Quantum is a platformer game where you and a friend have to solve puzzles with collaboration. The novelty of this game is the Quantum Locking mechanic that allows one player to transfer some momentum to the other which allows them to jump higher or dash further than originally possible.</Typography>
+                                        <Typography variant="body2" sx={{ my: 2 }}>My main focus was on the UI/UX design, particularly with the goal of combining the game's art direction together with a user interface that was simple and intuitive to use. I helped design and produce the menus and all its assets found within the game in addition with other game assets.</Typography>
                                     </div>
                                     
                                 </Box>
@@ -124,11 +124,11 @@ function PortfolioUsage() {
                     },
                     overflow: 'auto',
                     fontFamily: 'roboto', 
-                    width: '80%'
+                    width: isMobile ? '80%' : '55%'
                 }}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="quantum-content" id="quantum-header" sx={{
-                        fontSize: 20, 
-                        fontWeight: 700,
+                        fontSize: 16, 
+                        // fontWeight: 700,
                         backgroundColor: '#707070',
                         borderRadius: '8px'
                     }}>
@@ -148,16 +148,16 @@ function PortfolioUsage() {
                                 <div width="100%" height="100%">
                                     <Typography variant="h5" sx={{
                                         flexGrow: 1,
-                                        color: 'inherit',
+                                        color: theme.palette.primary.main,
                                         textDecoration: 'none',
                                         fontWeight: 'bold'}}>
                                         Mobile Application
                                     </Typography>
-                                    <p><b>Made in Android Studio with Kotlin and Java.</b></p>
-                                    <p><b>Repo link: </b><Link href="https://github.com/pammikoundi/spotify_wrapped_app" underline="hover" target="_blank" rel="noopener" color="inherit">https://github.com/pammikoundi/spotify_wrapped_app</Link></p>
-                                    <p><b>Full Demo link: </b><Link href="https://www.youtube.com/watch?v=nicR47nDl9o" underline="hover" target="_blank" rel="noopener" color="inherit">https://www.youtube.com/watch?v=nicR47nDl9o</Link></p>
-                                    <p>Heavily inspired by Spotify's annual Wrapped feature, this project consisted of 7 group members working together to build an app that would allow you to view information about your listening habits on Spotify. The project was built on the Android Studio framework. We learnt how to integrate <b>Spotify's API</b> and <b>Firebase</b> into our application to allow us to store and access user data.</p>
-                                    <p>My primary contribution was first performing requirements engineering and designing the UI/UX of the app with the help of <b>LottieFiles</b>. <b>Jetpack Compose</b> was also a toolkit we used to help accelerate the development process.</p>
+                                    <Typography variant="body2" sx={{ my: 2 }}><b>Made in Android Studio with Kotlin and Java.</b></Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}><b>Repo link: </b><Link href="https://github.com/pammikoundi/spotify_wrapped_app" underline="hover" target="_blank" rel="noopener" color="inherit">https://github.com/pammikoundi/spotify_wrapped_app</Link></Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}><b>Full Demo link: </b><Link href="https://www.youtube.com/watch?v=nicR47nDl9o" underline="hover" target="_blank" rel="noopener" color="inherit">https://www.youtube.com/watch?v=nicR47nDl9o</Link></Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}>Heavily inspired by Spotify's annual Wrapped feature, this project consisted of 7 group members working together to build an app that would allow you to view information about your listening habits on Spotify. The project was built on the Android Studio framework. We learnt how to integrate <b>Spotify's API</b> and <b>Firebase</b> into our application to allow us to store and access user data.</Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}>My primary contribution was first performing requirements engineering and designing the UI/UX of the app with the help of <b>LottieFiles</b>. <b>Jetpack Compose</b> was also a toolkit we used to help accelerate the development process.</Typography>
                                 </div>               
                             </Box>
                             {!isMobile && (<Box sx={{
@@ -187,11 +187,11 @@ function PortfolioUsage() {
                     },
                     overflow: 'auto',
                     fontFamily: 'roboto', 
-                    width: '80%'
+                    width: isMobile ? '80%' : '55%'
                 }}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="quantum-content" id="quantum-header" sx={{
-                        fontSize: 20, 
-                        fontWeight: 700,
+                        fontSize: 16, 
+                        // fontWeight: 700,
                         backgroundColor: '#707070',
                         borderRadius: '8px'
                     }}>
@@ -211,15 +211,15 @@ function PortfolioUsage() {
                                 <div width="100%" height="100%">
                                     <Typography variant="h5" sx={{
                                         flexGrow: 1,
-                                        color: 'inherit',
+                                        color: theme.palette.primary.main,
                                         textDecoration: 'none',
                                         fontWeight: 'bold'}}>
                                         Video Game
                                     </Typography>
-                                    <p><b>Made in Unity with C#. Asset rendering done in MagicaVoxel</b></p>
-                                    <p><b>Repo link: </b><Link href="https://github.gatech.edu/Gaming-for-Electric-Power-Grids/vip_resilience_games" underline="hover" target="_blank" rel="noopener" color="inherit">https://github.gatech.edu/Gaming-for-Electric-Power-Grids/vip_resilience_games</Link></p>
-                                    <p>The development of this video is part of a larger research effort to crowdsource resiliency for electric power grids. The game simulates real-life problems encountered with designing and building power grids to power modern cities. Players attempt to construct resilient power grids with 3 main factors in mind: cost, reliability, and safety. The high-level goal of the game is to compile data on the weight people place on these 3 values and how they would implement electric power grids.</p>
-                                    <p>My contribution thus far has been producing game assets as part of the Graphics subteam to design and implement the UI for the game. This specifically refers to the menus and UI interface. As part of the Graphics subteam, we often collaborate with the Game Design subteam and Implementation subteam to determine how certain mechanics of the game are depicted. I was put in charge of finding a solution to depicting 2 tiles connected by both overhead lines and underground cables.</p>
+                                    <Typography variant="body2" sx={{ my: 2 }}><b>Made in Unity with C#. Asset rendering done in MagicaVoxel</b></Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}><b>Repo link: </b><Link href="https://github.gatech.edu/Gaming-for-Electric-Power-Grids/vip_resilience_games" underline="hover" target="_blank" rel="noopener" color="inherit">https://github.gatech.edu/Gaming-for-Electric-Power-Grids/vip_resilience_games</Link></Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}>The development of this video is part of a larger research effort to crowdsource resiliency for electric power grids. The game simulates real-life problems encountered with designing and building power grids to power modern cities. Players attempt to construct resilient power grids with 3 main factors in mind: cost, reliability, and safety. The high-level goal of the game is to compile data on the weight people place on these 3 values and how they would implement electric power grids.</Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}>My contribution thus far has been producing game assets as part of the Graphics subteam to design and implement the UI for the game. This specifically refers to the menus and UI interface. As part of the Graphics subteam, we often collaborate with the Game Design subteam and Implementation subteam to determine how certain mechanics of the game are depicted. I was put in charge of finding a solution to depicting 2 tiles connected by both overhead lines and underground cables.</Typography>
                                 </div>               
                             </Box>
                             {!isMobile && (<Box sx={{
