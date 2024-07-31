@@ -17,7 +17,7 @@ function Banner({ showSlide }) {
             flexDirection: 'column',  // Stack children vertically
             flexGrow: 1,
             margin: 'auto',
-            mt: isMobile ? 6 : 12,
+            mt: 12,
             position: 'relative',
             backgroundColor: 'primary',
             color: 'white',
