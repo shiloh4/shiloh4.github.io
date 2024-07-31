@@ -28,6 +28,7 @@ function Body() {
             <Grow in={checked} timeout={1000}>
             <Paper elevation={1} sx={{width: isMobile ? '80%' : '55%',
                                       borderRadius: '16px',
+                                      backgroundColor: theme.palette.background.paper,
                                       ml: '0' }}>            
             <Box sx={{
                 flexDirection: 'column',
@@ -40,7 +41,7 @@ function Body() {
                         I love to both build and break things and am driven by challenging projects, self-guided research, and collaborative problem-solving. My passion lies in creating intuitive and innovative front-end designs that incorporate unique elements of color, typography, and motion.
                     </Typography>
                     <Typography variant="body2" sx={{ mb: 3 }}>
-                        I am currently a Computer Science junior at Georgia Tech, interning as a QA Engineer at Keysight. My academic threads are <Link href="https://www.cc.gatech.edu/academics/threads/information-internetworks" underline="hover" target="_blank" rel="noopener" sx={{color: "#87CEFA"}}>Information Internetworks</Link> and <Link href="https://www.cc.gatech.edu/academics/threads/media" underline="hover" target="_blank" rel="noopener" sx={{color: "#87CEFA"}}>Media</Link>.
+                        I am currently a Computer Science junior at Georgia Tech, interning as a QA Engineer at Keysight. My academic threads are <Link href="https://www.cc.gatech.edu/academics/threads/information-internetworks" underline="hover" target="_blank" rel="noopener" sx={{color: theme.palette.link.primary}}>Information Internetworks</Link> and <Link href="https://www.cc.gatech.edu/academics/threads/media" underline="hover" target="_blank" rel="noopener" sx={{color: theme.palette.link.primary}}>Media</Link>.
                     </Typography>
                     <Typography variant="body2">
                         This is my personal space, where I share my projects and achievements, and showcase my passion for software development and design.

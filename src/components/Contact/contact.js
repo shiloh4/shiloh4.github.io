@@ -25,7 +25,7 @@ function Contact() {
             <Grid container spacing={2} alignItems="center">
                 <Grid item xs={8}>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <LinkedInIcon sx={{ color: 'white', fontSize: 30, marginRight: 1 }} />
+                        <LinkedInIcon sx={{ color: theme.components.MuiIcon.styleOverrides.root.primary, fontSize: 30, marginRight: 1 }} />
                         <Typography variant="body2" sx={{my: 2}}>
                             <Link href="https://www.linkedin.com/in/ethan-loo-73a1b0236/" underline="hover" target="_blank" rel="noopener" color="inherit" sx={{ textDecoration: 'none' }}>
                                 linkedin.com/in/ethan-loo-73a1b0236/
@@ -35,7 +35,7 @@ function Contact() {
                 </Grid>
                 <Grid item xs={8}>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <GitHubIcon sx={{ color: 'white', fontSize: 30, marginRight: 1 }} />
+                        <GitHubIcon sx={{ color: theme.components.MuiIcon.styleOverrides.root.primary, fontSize: 30, marginRight: 1 }} />
                         <Typography variant="body2" sx={{my: 2}}>
                         <Link href="https://github.com/shiloh4" underline="hover" target="_blank" rel="noopener" color="inherit" sx={{ textDecoration: 'none' }}>
                             github.com/shiloh4
@@ -45,7 +45,7 @@ function Contact() {
                 </Grid>
                 <Grid item xs={8}>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <EmailRoundedIcon sx={{ color: 'white', fontSize: 30, marginRight: 1 }} />
+                        <EmailRoundedIcon sx={{ color: theme.components.MuiIcon.styleOverrides.root.primary, fontSize: 30, marginRight: 1 }} />
                         <Typography variant="body2" sx={{my: 2}}>
                         <Link href="mailto:ethanlooyt@gmail.com" underline="hover" target="_blank" rel="noopener" color="inherit" sx={{ textDecoration: 'none' }}>
                             ethanlooyt@gmail.com
@@ -55,7 +55,7 @@ function Contact() {
                 </Grid>
                 <Grid item xs={8}>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <LocalPhoneRoundedIcon sx={{ color: 'white', fontSize: 30, marginRight: 1 }} />
+                        <LocalPhoneRoundedIcon sx={{ color: theme.components.MuiIcon.styleOverrides.root.primary, fontSize: 30, marginRight: 1 }} />
                         <Typography variant="body2" sx={{ textDecoration: 'none', my: 2 }}>
                             (470) 301-5218
                         </Typography>
