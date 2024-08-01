@@ -19,7 +19,7 @@ function Skills() {
                     <b>Programming/Scripting Languages/Libraries: </b>HTML, CSS, React, Java, Python, TKinter, C, C#, JavaScript, SQL, LaTeX, SenseTalk
                 </Typography>
                 <Typography variant="body2" sx={{my: '1%'}}>
-                    <b>Software/Frameworks:</b> Android Studio, Unity, Git, GitHub, PopSQL, Firebase, Node.js, MagicaVoxel, Aseprite, Microsoft Suite (Excel, Access, etc.)
+                    <b>Software/Frameworks:</b> Android Studio, Unity, Figma, Git, GitHub, PopSQL, Firebase, Node.js, MagicaVoxel, Aseprite, Microsoft Suite (Excel, Access, etc.)
                 </Typography>
                 <Typography variant="body2" sx={{my: '1%'}}>
                     <b>Languages:</b> English, Malay, Mandarin
