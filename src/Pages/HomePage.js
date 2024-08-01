@@ -15,6 +15,7 @@ const colors = [
 ];
 
 function ButtonUsage() {
+  const theme = useTheme();
   const [color, setColor] = React.useState("#B3A369");
   const [buttonSize, setButtonSize] = React.useState(1);
 
@@ -27,7 +28,7 @@ function ButtonUsage() {
   return (
     <Box sx={{ position: 'relative', display: 'inline-block' }}>
       <Button variant="contained" onClick={ handleClick } style={{ backgroundColor: color, '&:hover': { backgroundColor: color }, transform: `scale(${buttonSize})`, 
-          transition: 'transform 0.3s' }}>
+          transition: 'transform 0.3s', zIndex: theme.zIndex.drawer + 2 }}>
         <code style = {{ fontSize: '14pt' }}>Hello World</code>
       </Button>
     </Box>
