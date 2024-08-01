@@ -50,7 +50,7 @@ export default function App() {
 
   return (
     
-    <div  style={{ width: '100vw', overflowX: 'hidden' }}>
+    <div  style={{ width: '100vw', height: '100vh', overflowX: 'hidden' }}>
       <Grid container justifyContent="center" alignItems="center">
         <Grid item>
           <Navbar />

@@ -43,9 +43,26 @@ html, body, #root {
   height: 100%;
   display: flex;
   flex-direction: column;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: rgba(179, 163, 105, 0.8) transparent; /* thumb color and track color */
 }
 
 .smth {
   min-height: calc(100vh - 75px);
 }
 
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(179, 163, 105, 0.8);
+  border-radius: 10px;
+}
