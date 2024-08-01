@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography, Button } from '@mui/material';
-import gtpic from '../../assets/GT.jpg';
 import Slide from '@mui/material/Slide';
 import { useTheme, useMediaQuery } from '@mui/material';
 

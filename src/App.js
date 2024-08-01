@@ -10,6 +10,7 @@ import HomePage from './Pages/HomePage';
 import ContactPage from './Pages/ContactPage';
 import ResumePage from './Pages/ResumePage';
 import PortfolioPage from './Pages/PortfolioPage';
+import BlogPage from './Pages/BlogPage';
 import { alignProperty } from '@mui/material/styles/cssUtils';
 
 const pageVariants = {
@@ -92,6 +93,14 @@ export default function App() {
                                               transition={pageTransition}>
                                                 <ContactPage/>
                                             </motion.div>} />
+            <Route path="/blog" element={<motion.div
+                                              initial="initial"
+                                              animate="in"
+                                              exit="out"
+                                              variants={pageVariants}
+                                              transition={pageTransition}>
+                                                <BlogPage/>
+                                            </motion.div>} />                                
           </Routes>
           </AnimatePresence>
         </div>

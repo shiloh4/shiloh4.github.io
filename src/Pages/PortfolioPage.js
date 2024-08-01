@@ -5,7 +5,7 @@ function PortfolioUsage() {
     return <Portfolio></Portfolio>
   }
 
-export default function ResumePage() {
+export default function PortfolioPage() {
     return (
         <div>
             <PortfolioUsage />

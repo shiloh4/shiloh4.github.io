@@ -75,8 +75,8 @@ const darkTheme = createTheme({
       paper: '#1C1C1C',
     },
     text: {
-      primary: '#E0E0E0', // Light Gray
-      secondary: '#FFFFFF', // White
+      primary: '#FFFFFF', // White
+      secondary: '#E0E0E0', // Light Gray
     },
     link: {
       primary: '#61dafb',

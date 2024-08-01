@@ -44,6 +44,7 @@ function Navbar() {
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
       // Check if current scroll position is greater than last scroll position
+      console.log('Window ScrollY:', window.scrollY);
       if (window.scrollY > lastScrollY && window.scrollY > 100) {
         // Scrolling down
         setShow(false);
@@ -53,10 +54,13 @@ function Navbar() {
       }
       // Update lastScrollY to current position
       setLastScrollY(window.scrollY);
+      console.log('Window ScrollY:', window.scrollY);
+      console.log('Show:', show);
     }
   };
 
   useEffect(() => {
+    console.log('Navbar mounted');
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', controlNavbar);
 

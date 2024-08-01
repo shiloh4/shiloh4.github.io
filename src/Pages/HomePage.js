@@ -1,6 +1,11 @@
 import * as React from 'react';
+import ArrowOutwardOutlinedIcon from '@mui/icons-material/ArrowOutwardOutlined';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { useTheme, useMediaQuery } from '@mui/material';
+import { List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
+import { Link } from 'react-router-dom';
 import Banner from '../components/Home/homebanner';
 import Body from '../components/Home/homebody';
 import Skills from '../components/Home/homeskills';
@@ -30,16 +35,46 @@ function ButtonUsage() {
 }
 
 export default function HomePage({ showSlide }) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   // console.log('HomePage showSlide:', showSlide)
   return (
     <div>
       <Banner showSlide={ showSlide }/>
       <Body />
       <Skills />
-      <Box sx={{display: 'flex', flexDirection: 'row', mx: 5, my: 5 }}>
-        <Box sx={{flexGrow: 1}}></Box>
+      <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'center', my: 15 }}>
         <ButtonUsage/>
-        <Box sx={{flexGrow: 1}}></Box>
+      </Box>
+      <Typography variant="body1" sx={{color: theme.palette.primary.main,
+                                      display: 'flex',
+                                      flexDirection: 'column',
+                                      my: '4%',
+                                      width: isMobile ? '80%' : '55%',
+                                      px: 3,
+                                      py: 1,
+                                      margin: 'auto'
+      }}><b>Blog posts</b></Typography>
+      <Box sx={{display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexGrow: 1,
+                pb: '75px',
+      }}>
+        <List sx={{width: isMobile ? '80%' : '55%',
+                  borderTop: '1px solid',
+                  borderBottom: '1px solid',
+                  p: 0,
+        }}>
+          <ListItem button component={Link} to="/blog">
+            <ListItemText primary="Insights from My QA Internship at Keysight Technologies" secondary="How to break your app" primaryTypographyProps={{fontSize: 'body1', fontWeight: 'bold', fontFamily: "Roboto, Open Sans, sans-serif", px: 1}} secondaryTypographyProps={{px: 1, fontSize: 'body2', fontFamily: "Roboto, Open Sans, sans-serif"}}/>
+            <ListItemIcon>
+              <ArrowOutwardOutlinedIcon />
+            </ListItemIcon>
+          </ListItem>
+        </List>
       </Box>
     </div>
   );
