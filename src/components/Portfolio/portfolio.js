@@ -10,6 +10,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import quantum from '../../assets/quantumdemo.mp4';
 import spotify from '../../assets/spotifyWrappedDemo.mp4';
 import BouncyThing from '../../assets/BouncyThing.gif';
+import currentCrisis from '../../assets/currentCrisisDemo.mp4';
 import Fan from '../../assets/Fan.gif';
 import Logo from '../../assets/GameIcon.png';
 
@@ -35,6 +36,58 @@ function PortfolioUsage() {
                 pt: 12,
                 pb: 2,
             }}>
+                <Accordion elevation={0} sx={{ 
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    flexGrow: 1,
+                    mb: 1,
+                    elevation: 0,
+                    '&:before': { // Removes the default expansion panel separator
+                        display: 'none',
+                    },
+                    overflow: 'auto',
+                    fontFamily: 'roboto', 
+                    width: isMobile ? '80%' : '55%'
+                }}>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="quantum-content" id="quantum-header" sx={{
+                        fontSize: 16, 
+                        // fontWeight: 700,
+                        backgroundColor: theme.components.MuiAccordionSummary.styleOverrides.root.backgroundColor,
+                        borderRadius: '8px'
+                    }}>
+                        Connect-RX (HackGT11)
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Box sx={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'center',
+                        }}>
+                            <Box sx={{
+                                width: '100%',
+                                height: '100%',
+                                mt: 1,
+                            }}>
+                                <div width="100%" height="100%">
+                                    <Typography variant="h5" sx={{
+                                        flexGrow: 1,
+                                        color: theme.palette.primary.main,
+                                        textDecoration: 'none',
+                                        fontWeight: 'bold'}}>
+                                        Mobile App & Web App
+                                    </Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}><b>Made in React Native and React, tunneled by ngrok from Flask API and SQLite</b></Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}><b>Repo link: </b><Link href="https://github.com/shiloh4/medical_adherence" underline="hover" target="_blank" rel="noopener" color="inherit">https://github.com/shiloh4/medical_adherence</Link></Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}><b>Full Demo link: </b><Link href="https://www.youtube.com/watch?v=OUshT5QRBj4&ab_channel=JunKitLim" underline="hover" target="_blank" rel="noopener" color="inherit">https://www.youtube.com/watch?v=OUshT5QRBj4&ab_channel=JunKitLim</Link></Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}>Connect-RX is a comprehensive solution designed to address the problem of medical non-adherence, helping patients track their medication schedules and enabling doctors to monitor adherence more effectively. The system consists of three main components: a React Native mobile app for patients, a web app for doctors and pharmacists, and a Flask API backend, with SQLite as the database. Ngrok was utilized to create a secure connection between the mobile and web applications, facilitating real-time communication during development. Each component was written in a separate repo so the link provided is just for the mobile app I developed. The mobile app allows patients to track their medications throughout the day, while the web app provides doctors with access to patient adherence data, improving treatment monitoring and outcomes.</Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}>As the lead developer for the mobile app, my primary focus was building an easy-to-use interface in React Native that helps patients stay on track with their medications. The app features medication cards detailing dosage, frequency, and reminders, a streak counter that tracks daily adherence and motivates patients to maintain consistency, and a comprehensive log of their medication history. These logs are shared with doctors via the web app, providing them with critical insights into patient adherence. I also handled push notifications to remind patients to take their medication on time and ensure adherence data is accurately reflected in the backend.</Typography>
+                                    <Typography variant="body2" sx={{ my: 2 }}>Do visit the demo link above for a comprehensive view of our project.</Typography>
+                                </div>               
+                            </Box>
+                        </Box>    
+                    </AccordionDetails>
+                </Accordion>
                 <Accordion elevation={0} sx={{ 
                     display: 'flex',
                     flexDirection: 'column',
@@ -195,7 +248,7 @@ function PortfolioUsage() {
                         backgroundColor: theme.components.MuiAccordionSummary.styleOverrides.root.backgroundColor,
                         borderRadius: '8px'
                     }}>
-                        Current Crisis
+                        Current Crisis (Vertically Intergrated Project)
                     </AccordionSummary>
                     <AccordionDetails>
                         <Box sx={{
@@ -223,17 +276,16 @@ function PortfolioUsage() {
                                 </div>               
                             </Box>
                             {!isMobile && (<Box sx={{
-                                width: '30%',
-                                height: 'auto',
+                                width: '100%',
+                                height: '100%',
+                                alignSelf: 'top',
                                 mt: 1,
                                 pl: 2
                             }}>
-                                <Tooltip title="There's meant to be a demo video here but the specific version of Unity does not work on my laptop so I can't launch the game momentarily :(">
                                     <video width="100%" height="100%" controls autoPlay muted loop ref={ videoRef }>
-                                        <source type="video/mp4" />
+                                        <source src= { currentCrisis } type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
-                                </Tooltip>
                             </Box>
                             )}
                         </Box>
