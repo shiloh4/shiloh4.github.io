@@ -60,7 +60,7 @@ function Navbar() {
   };
 
   useEffect(() => {
-    console.log('Navbar mounted');
+    // console.log('Navbar mounted');
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', controlNavbar);
 

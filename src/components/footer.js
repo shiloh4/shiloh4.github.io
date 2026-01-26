@@ -25,9 +25,6 @@ function Footer() {
                 alignItems: 'baseline',
             }}>
                 <Typography variant='body2'>© 2024 | Ethan Loo</Typography>
-                <Typography sx={{ fontFamily: 'roboto', fontSize: 6 }}>
-                    <Link href="https://icons8.com/icon/F3hvjvZc3jEF/portfolium" underline="hover" target="_blank" rel="noopener" color="inherit">Portfolium</Link> icon by <Link href="https://icons8.com" underline="hover" target="_blank" rel="noopener" color="inherit">Icons8</Link>
-                </Typography>
             </Box>
         </Box>
     );

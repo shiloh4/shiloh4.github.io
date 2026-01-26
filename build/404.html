@@ -6,7 +6,7 @@
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       var l = window.location;
-      var path = l.pathname.replace(/\//g, '~and~');
+      var path = l.pathname.slice(1).replace(/&/g, '~and~');
       l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/?/' + path + l.search + l.hash);
     </script>
   </head>
