@@ -72,16 +72,18 @@ function Navbar() {
 
   return (
     <Box>
-      <AppBar position="fixed" sx={{ 
+      <AppBar position="absolute" sx={{ 
         justifyContent: 'center',
         display: 'flex',
         zIndex: (theme) => theme.zIndex.drawer + 1, 
         transform: show ? 'translateY(0)' : 'translateY(-100%)', 
         transition: 'transform 0.5s ease-in-out', 
+        top: 0,
+        left: 0,
         backgroundColor: navbarBgColor,
         boxShadow: 'none',
-        backdropFilter: 'blur(10px)', // Blur effect
-        WebkitBackdropFilter: 'blur(10px)', // safari compatibility
+        backdropFilter: 'blur(30px)', // Blur effect
+        WebkitBackdropFilter: 'blur(30px)', // safari compatibility
         pt: isMobile ? 2 : 1,
         width: '100%',
         alignItems: 'center'

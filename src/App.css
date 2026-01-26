@@ -48,7 +48,7 @@ html, body, #root {
 }
 
 .smth {
-  min-height: calc(100vh - 75px);
+  min-height: 0;
 }
 
 /* For WebKit browsers */

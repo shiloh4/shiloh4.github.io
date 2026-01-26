@@ -9,31 +9,33 @@ import { Link } from 'react-router-dom';
 import Banner from '../components/Home/homebanner';
 import Body from '../components/Home/homebody';
 import Skills from '../components/Home/homeskills';
+import Footer from '../components/footer';
+import { height } from '@mui/system';
 
 const colors = [
   "#B3A369, #FF5733", "#33FF57", "#3357FF", "#FF33A5", "#A533FF", "#FFDB33", "#33FFF6"
 ];
 
-function ButtonUsage() {
-  const theme = useTheme();
-  const [color, setColor] = React.useState("#B3A369");
-  const [buttonSize, setButtonSize] = React.useState(1);
+// function ButtonUsage() {
+//   const theme = useTheme();
+//   const [color, setColor] = React.useState("#B3A369");
+//   const [buttonSize, setButtonSize] = React.useState(1);
 
-  const handleClick = () => {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    setColor(randomColor);
-    setButtonSize(prevSize => prevSize + 0.1);
-  };
+//   const handleClick = () => {
+//     const randomColor = colors[Math.floor(Math.random() * colors.length)];
+//     setColor(randomColor);
+//     setButtonSize(prevSize => prevSize + 0.1);
+//   };
 
-  return (
-    <Box sx={{ position: 'relative', display: 'inline-block' }}>
-      <Button variant="contained" onClick={ handleClick } style={{ backgroundColor: color, '&:hover': { backgroundColor: color }, transform: `scale(${buttonSize})`, 
-          transition: 'transform 0.3s', zIndex: theme.zIndex.drawer + 2 }}>
-        <code style = {{ fontSize: '14pt' }}>Hello World</code>
-      </Button>
-    </Box>
-  );
-}
+//   return (
+//     <Box sx={{ position: 'relative', display: 'inline-block' }}>
+//       <Button variant="contained" onClick={ handleClick } style={{ backgroundColor: color, '&:hover': { backgroundColor: color }, transform: `scale(${buttonSize})`, 
+//           transition: 'transform 0.3s', zIndex: theme.zIndex.drawer + 2 }}>
+//         <code style = {{ fontSize: '14pt' }}>Hello World</code>
+//       </Button>
+//     </Box>
+//   );
+// }
 
 export default function HomePage({ showSlide }) {
   const theme = useTheme();
@@ -41,11 +43,11 @@ export default function HomePage({ showSlide }) {
 
   // console.log('HomePage showSlide:', showSlide)
   return (
-    <div>
+    <Box sx={{ height: '100vh', overflowX: 'hidden' }}>
       <Banner showSlide={ showSlide }/>
       <Body />
       <Skills />
-      <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'center', my: 15 }}>
+      {/* <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'center', my: 15 }}>
         <ButtonUsage/>
       </Box>
       <Typography variant="body1" sx={{color: theme.palette.primary.main,
@@ -76,7 +78,10 @@ export default function HomePage({ showSlide }) {
             </ListItemIcon>
           </ListItem>
         </List>
+      </Box> */}
+      <Box sx={{ position: 'absolute', bottom: 0, width: '100%' }}>
+        <Footer />
       </Box>
-    </div>
+    </Box>
   );
 }

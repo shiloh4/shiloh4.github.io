@@ -4,14 +4,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/navbar';
 import './App.css';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 import Footer from './components/footer';
 import HomePage from './Pages/HomePage';
 import ContactPage from './Pages/ContactPage';
 import ResumePage from './Pages/ResumePage';
 import PortfolioPage from './Pages/PortfolioPage';
 import BlogPage from './Pages/BlogPage';
-import { alignProperty } from '@mui/material/styles/cssUtils';
 
 const pageVariants = {
   initial: {
@@ -49,18 +47,21 @@ export default function App() {
 
   // console.log('App showSlide:', showSlide);
 
+  const PageShell = ({ children }) => (
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Box sx={{ flex: 1 }}>
+        {children}
+      </Box>
+    </Box>
+  );
+
   return (
-    
-    <div  style={{ width: '100vw', height: '100vh', overflowX: 'hidden' }}>
-      <Grid container justifyContent="center" alignItems="center">
-        <Grid item>
-          <Navbar />
-        </Grid>
-      </Grid>
-        <div className="smth">
+    <Box sx={{ width: '100vw', maxHeight: '100vh', overflowX: 'hidden' }}>
+      <Navbar />
+      <div className="smth">
         <AnimatePresence mode='wait'>
           <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<motion.div
+            <Route path="/" element={<PageShell><motion.div
                                         // key={location.pathname}
                                         initial="initial"
                                         animate="in"
@@ -68,44 +69,42 @@ export default function App() {
                                         variants={pageVariants}
                                         transition={pageTransition}>
                                           <HomePage showSlide= { showSlide }  />
-                                        </motion.div>} />
-            <Route path="/resume" element={<motion.div
+                                        </motion.div></PageShell>} />
+            <Route path="/resume" element={<PageShell><motion.div
                                             initial="initial"
                                             animate="in"
                                             exit="out"
                                             variants={pageVariants}
                                             transition={pageTransition}>
                                               <ResumePage/>
-                                          </motion.div>} />
-            <Route path="/portfolio" element={<motion.div
+                                          </motion.div></PageShell>} />
+            <Route path="/portfolio" element={<PageShell><motion.div
                                                 initial="initial"
                                                 animate="in"
                                                 exit="out"
                                                 variants={pageVariants}
                                                 transition={pageTransition}>
                                                   <PortfolioPage/>
-                                              </motion.div>} />
-            <Route path="/contact" element={<motion.div
+                                              </motion.div></PageShell>} />
+            <Route path="/contact" element={<PageShell><motion.div
                                               initial="initial"
                                               animate="in"
                                               exit="out"
                                               variants={pageVariants}
                                               transition={pageTransition}>
                                                 <ContactPage/>
-                                            </motion.div>} />
-            <Route path="/blog" element={<motion.div
+                                            </motion.div></PageShell>} />
+            {/* <Route path="/blog" element={<PageShell><motion.div
                                               initial="initial"
                                               animate="in"
                                               exit="out"
                                               variants={pageVariants}
                                               transition={pageTransition}>
                                                 <BlogPage/>
-                                            </motion.div>} />                                
+                                            </motion.div></PageShell>} />                                 */}
           </Routes>
           </AnimatePresence>
         </div>
-      <Footer />
-    </div>
-    
+    </Box>
   );
 }
